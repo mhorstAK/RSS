@@ -1,3 +1,5 @@
+#Code from http://pythonprogramming.net/scraping-parsing-rss-feed/
+
 import urllib2
 from urllib2 import urlopen
 import re
