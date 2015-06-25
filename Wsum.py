@@ -1,5 +1,7 @@
 import urllib2
 from bs4 import BeautifulSoup
+import FreqSum
+from FreqSum import FrequencySummarizer
 
 def get_only_text(url):
  """ 
