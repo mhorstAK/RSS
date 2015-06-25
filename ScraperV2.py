@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#Michael Horstkoetter - This bit of code checks to see of a page has been updated with new articles, and if so get them.
+
 import feedparser
 import schedule
 from schedule import time
@@ -26,9 +29,9 @@ def job():
         c = time.mktime(d.modified_parsed)
         current_time = time.localtime()
         if a[i] != c:
-            Update = 'NEW INSTANCE posted to ' + rssURL[i][0] + '. - ' + time.strftime('%Y %b %d, %a %H:%M:%S CT', current_time)
+        	Update = 'NEW INSTANCE posted to ' + rssURL[i][0] + '. - ' + time.strftime('%Y %b %d, %a %H:%M:%S CT', current_time)
         else:
-            Update = 'Nothing new posted to ' + rssURL[i][0] + '. - ' + time.strftime('%Y %b %d, %a %H:%M:%S CT', current_time)
+        	Update = 'Nothing new posted to ' + rssURL[i][0] + '. - ' + time.strftime('%Y %b %d, %a %H:%M:%S CT', current_time)
         print(Update)
 #        print(c)
 #        print(a[i])

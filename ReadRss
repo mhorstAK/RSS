@@ -1,0 +1,6 @@
+import feedparser
+
+feed = feedparser.parse('http://rss.cnn.com/~ff/rss/cnn_topstories?a=9Fz0UiaVsH8:NPhpk5w3OAI:yIl2AUoC8zA')
+for entry in feed['entries']:
+    content = urlopen(entry['link']).read()
+print(content)
